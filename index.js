@@ -46,6 +46,17 @@ class Person {
     this.age = age;
     this.stomach = [];
   }
+  eat(someFood) {
+    if (this.stomach.length < 10) {
+      this.stomach.push(someFood);
+    }
+  }
+  poop() {
+    this.stomach = [];
+  }
+  toString() {
+    return `${this.name}, ${this.age}`;
+  }
 }
 
 /*
@@ -62,7 +73,17 @@ class Person {
           + The `drive` method should return a string "I ran out of fuel at x miles!" x being `odometer`.
   */
 
-class Car {}
+class Car {
+  constructor(model, milesPerGallon) {
+    this.model = model;
+    this.milesPerGallon = milesPerGallon;
+    this.tank = 0;
+    this.odometer = 0;
+  }
+  fill(gallons) {
+    this.tank = this.tank + this.odometer;
+  }
+}
 
 /*
     TASK 3
